@@ -36,7 +36,7 @@ const SignUp = () => {
         <div className="text-center">
           <Link to="/" className="flex items-center justify-center space-x-2 mb-8">
             <TreePine className="h-12 w-12 text-green-600" />
-            <span className="text-2xl font-bold text-gray-900">FamilyTree</span>
+            <span className="text-2xl font-bold text-gray-900">Lineage</span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Create Your Account

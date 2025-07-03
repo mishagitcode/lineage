@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <TreePine className="h-8 w-8 text-green-400" />
-              <span className="text-xl font-bold">FamilyTree</span>
+              <span className="text-xl font-bold">Lineage</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Discover your family history and build your family tree with our easy-to-use tools. 
@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <Mail className="h-4 w-4" />
-                <span>contact@familytree.com</span>
+                <span>contact@lineage.com</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <Phone className="h-4 w-4" />
@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 FamilyTree. All rights reserved. Built with love for families worldwide.
+            © 2025 Lineage. All rights reserved. Built with love for families worldwide.
           </p>
         </div>
       </div>

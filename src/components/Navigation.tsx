@@ -22,7 +22,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <TreePine className="h-8 w-8 text-green-600" />
-            <span className="text-xl font-bold text-gray-900">FamilyTree</span>
+            <span className="text-xl font-bold text-gray-900">Lineage</span>
           </Link>
 
           {/* Desktop Navigation */}
