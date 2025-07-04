@@ -52,9 +52,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Help Center
-                </a>
+                <Link to="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -64,24 +64,24 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/privacy" className="text-gray-300 hover:text-green-400 transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/terms" className="text-gray-300 hover:text-green-400 transition-colors">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/cookies" className="text-gray-300 hover:text-green-400 transition-colors">
                   Cookie Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
+                <Link to="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Lineage. All rights reserved. Built with love for families worldwide.
+            © 2024 Lineage. All rights reserved. Built with love for families worldwide.
           </p>
         </div>
       </div>
