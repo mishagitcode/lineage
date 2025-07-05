@@ -1,11 +1,14 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TreePine, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Login = () => {
+  const { t } = useLanguage();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,10 +29,10 @@ const Login = () => {
             <span className="text-2xl font-bold text-gray-900">Lineage</span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome Back
+            {t('welcomeBack')}
           </h2>
           <p className="text-gray-600">
-            Sign in to continue building your family tree
+            {t('signInContinue')}
           </p>
         </div>
 
@@ -38,7 +41,7 @@ const Login = () => {
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                Email Address
+                {t('emailAddress')}
               </Label>
               <Input
                 id="email"
@@ -47,7 +50,7 @@ const Login = () => {
                 autoComplete="email"
                 required
                 className="mt-1"
-                placeholder="Enter your email"
+                placeholder={t('enterEmail')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -55,7 +58,7 @@ const Login = () => {
 
             <div>
               <Label htmlFor="password" className="text-sm font-medium text-gray-700">
-                Password
+                {t('password')}
               </Label>
               <div className="mt-1 relative">
                 <Input
@@ -64,7 +67,7 @@ const Login = () => {
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="current-password"
                   required
-                  placeholder="Enter your password"
+                  placeholder={t('enterPassword')}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -91,20 +94,20 @@ const Login = () => {
                   className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
-                  Remember me
+                  {t('rememberMe')}
                 </label>
               </div>
 
               <div className="text-sm">
                 <a href="#" className="font-medium text-green-600 hover:text-green-500">
-                  Forgot your password?
+                  {t('forgotPassword')}
                 </a>
               </div>
             </div>
 
             <div>
               <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
-                Sign In
+                {t('signIn')}
               </Button>
             </div>
 
@@ -114,7 +117,7 @@ const Login = () => {
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                  <span className="px-2 bg-white text-gray-500">{t('orContinueWith')}</span>
                 </div>
               </div>
 
@@ -124,14 +127,14 @@ const Login = () => {
                   type="button"
                   className="w-full border-gray-300 text-gray-700 hover:bg-gray-50"
                 >
-                  Google
+                  {t('google')}
                 </Button>
                 <Button
                   variant="outline"
                   type="button"
                   className="w-full border-gray-300 text-gray-700 hover:bg-gray-50"
                 >
-                  Facebook
+                  {t('facebook')}
                 </Button>
               </div>
             </div>
@@ -141,9 +144,9 @@ const Login = () => {
         {/* Sign Up Link */}
         <div className="text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account?{' '}
+            {t('noAccount')}{' '}
             <Link to="/signup" className="font-medium text-green-600 hover:text-green-500">
-              Sign up for free
+              {t('signUpFree')}
             </Link>
           </p>
         </div>

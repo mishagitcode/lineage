@@ -1,7 +1,11 @@
+
 import { TreePine, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -13,8 +17,7 @@ const Footer = () => {
               <span className="text-xl font-bold">Lineage</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Discover your family history and build your family tree with our easy-to-use tools. 
-              Connect with your heritage and preserve your family's story for future generations.
+              {t('footerDescription')}
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
@@ -34,26 +37,26 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Home
+                  {t('home')}
                 </Link>
               </li>
               <li>
                 <Link to="/pricing" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Pricing
+                  {t('pricing')}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">
-                  About Us
+                  {t('aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Contact Us
+                  {t('contactUs')}
                 </Link>
               </li>
             </ul>
@@ -61,26 +64,26 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('legal')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/privacy" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Privacy Policy
+                  {t('privacyPolicy')}
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Terms of Service
+                  {t('termsOfService')}
                 </Link>
               </li>
               <li>
                 <Link to="/cookies" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Cookie Policy
+                  {t('cookiePolicy')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
-                  Contact Us
+                  {t('contactUs')}
                 </Link>
               </li>
             </ul>
@@ -89,7 +92,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Lineage. All rights reserved. Built with love for families worldwide.
+            {t('footerCopyright')}
           </p>
         </div>
       </div>

@@ -2,16 +2,19 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, TreePine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: t('home'), path: '/' },
+    { name: t('pricing'), path: '/pricing' },
+    { name: t('aboutUs'), path: '/about' },
+    { name: t('contactUs'), path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -30,7 +33,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.path}
                 to={item.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
@@ -43,16 +46,17 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Auth Buttons */}
+          {/* Language Switcher & Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher />
             <Link to="/login">
               <Button variant="outline" className="border-green-200 text-green-700 hover:bg-green-50">
-                Login
+                {t('login')}
               </Button>
             </Link>
             <Link to="/signup">
               <Button className="bg-green-600 hover:bg-green-700">
-                Sign Up
+                {t('signUp')}
               </Button>
             </Link>
           </div>
@@ -74,7 +78,7 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-green-100">
               {navItems.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.path}
                   to={item.path}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     isActive(item.path)
@@ -87,14 +91,17 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4">
+                <div className="px-3 py-2">
+                  <LanguageSwitcher />
+                </div>
                 <Link to="/login" onClick={() => setIsOpen(false)}>
                   <Button variant="outline" className="w-full border-green-200 text-green-700 hover:bg-green-50">
-                    Login
+                    {t('login')}
                   </Button>
                 </Link>
                 <Link to="/signup" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-green-600 hover:bg-green-700">
-                    Sign Up
+                    {t('signUp')}
                   </Button>
                 </Link>
               </div>

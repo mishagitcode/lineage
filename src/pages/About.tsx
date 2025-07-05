@@ -1,3 +1,4 @@
+
 import { Users, Heart, Target, Award } from 'lucide-react';
 
 const About = () => {
@@ -71,7 +72,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Lineage was born from a simple yet powerful idea: everyone deserves to know their family story. 
+                  FamilyTree was born from a simple yet powerful idea: everyone deserves to know their family story. 
                   Founded in 2020 by genealogy enthusiast Sarah Chen, our platform started as a personal project 
                   to help her own family trace their roots.
                 </p>
@@ -191,7 +192,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@lineage.com"
+              href="mailto:contact@familytree.com"
               className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Contact Us
